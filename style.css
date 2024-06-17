@@ -1,0 +1,835 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Outfit',sans-serif;
+    background: url(./src/images/6197033.jpg);
+    background-size: 100% 100%;
+    overflow-x: hidden;
+}
+
+#Container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap:36px;
+    backdrop-filter: blur(72px);
+}
+
+p,h1{
+    margin: 0;
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 4px;
+  }
+
+::-webkit-scrollbar-track {
+    background-color: rgb(1, 0, 18);
+  }
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: rgb(255, 216, 248);
+  }
+
+#heroSection{
+    height: 85vh;
+    width: 100%;
+    background:url(src/images/6197033.jpg);
+    background-size:100% 100%;
+}
+
+#bgBlur{
+    height: 100%;
+    backdrop-filter: blur(16px);
+    display: flex;
+    flex-direction: column;
+}
+
+#carousel{
+    display: flex;
+    flex-flow: column; 
+    height: 100%;
+    justify-content: center;
+    align-self: center;
+    text-align:center;
+    animation-name: sponsorDown;
+    animation-duration: 3s;
+}
+
+#navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px 4px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 21;
+    transition: all 0.4s ease-in;
+}
+
+
+#logoDiv{
+    font-size: 18px;
+    text-align-last: center;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.logoImg{
+    height: 60px;
+    width: 60px;
+}
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 18px;
+    font-size: 16px;
+}
+
+.menuButton{
+    cursor: pointer;
+    font-weight: lighter;
+    transition: all 0.3s ease-in-out;
+}
+
+.menuButton:hover{
+    color: rgb(255,216,248,1);
+}
+
+.buttonContainer{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.btnGen{
+    font-size: 12px;
+    font-weight: lighter;
+    width: 105px;
+    padding:12px 4px;
+    border-radius:8px;
+    cursor: pointer;
+    background-color: rgba(1, 1, 40, 0.808);
+    border: 1px solid white;
+    color: white;
+    transition: all 1s ease-in-out;
+}
+
+.btnGen:hover{
+    background-color:rgb(1, 0, 40);
+    border: 1px solid white;
+}
+
+.heroText{
+    font-size: 72px;
+}
+
+.heroDesc{
+    font-size: 32px;
+}
+
+#sponsorSection{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin:24px;
+    background-color: rgba(167, 167, 167, 0.32);
+    border-radius: 6px;
+    box-shadow: 0px 0px 3px rgb(107, 107, 107);
+    padding: 2px;
+    animation-name: sponsorDown;
+    animation-duration: 1.7s;
+}
+
+.sponsorCard{
+    align-self: center;
+    height: 90px;
+    width: 90px;
+}
+
+#stockGro{
+    height: 50px;
+}
+
+.subSection{
+    /* background-color: #080e29ab ; */
+    /* background-color: rgb(255, 216, 248); */
+    box-shadow: 0px 0px 12px #fefefe0e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px 24px 72px 24px;
+    gap: 16px;
+    margin: 0 12px;
+    background-size: cover;
+    margin: 0;
+    backdrop-filter: blur(12px);
+}
+
+.subSectionHeadBar{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-self: center;
+    padding: 12px;
+    text-align: center;
+    gap: 4px;
+    width: 80%;
+}
+
+.subSectionHeadText{
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.subSectionHeadDesc{
+    font-size: 18px;
+    font-weight: 400;
+    color: #a98cff;
+}
+
+#mottoSection{
+    background: url(src/images/pawel-czerwinski-ypqyuASFNps-unsplash.jpg);
+}
+
+#mottoCardContainer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.mottoCard{
+    background-color: rgba(48, 45, 45, 0.653);
+    box-shadow: 0px 0px 2px rgba(4, 4, 4, 0.304);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding:14px 14px 24px 14px;
+}
+
+.mottoCardLogo{
+    font-size: 24px;
+}
+
+.mottoCardHeading{
+    font-size: 18px;
+}
+
+.mottoCardDesc{
+    text-align: justify;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.readMore{
+    align-self:first baseline;
+    margin-top: 12px;
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+}
+
+.readMore i{
+    margin-left: 3px;
+}
+
+.readMore:hover{
+    color: rgb(255,216,248,1);
+}
+
+  
+.targetHover:nth-child(even){
+    animation-name: bringLeft;
+    animation-duration: 4s;
+}
+
+.targetHover:nth-child(odd){
+    animation-name: bringRight;
+    animation-duration: 4s;
+}
+
+
+.aboutContainer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 24px;
+    align-self: center;
+}
+
+.imageFrame{
+    display: flex;
+    background:url(src/images/pexels-tiger-lily-7109288.jpg);
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0px 0px 12px rgb(9, 9, 9);
+    width: 50%;
+}
+
+.mottoDesc{
+    color: rgb(215, 255, 84);
+}
+
+.aboutDesc{
+    color: #ff7de5;
+}
+
+.meetDesc{
+    color: rgb(251, 255, 123);
+}
+
+.aboutContentContainer{
+    width: 40%;
+    display: flex;
+    flex-flow: column;
+    gap: 12px;
+}
+
+.aboutContent{
+    font-size: 16px;
+    font-weight: lighter;
+    text-align: justify;
+}
+
+#eventSection{
+    background: url(src/images/pawel-czerwinski-fPN1w7bIuNU-unsplash.jpg);
+    background-size: contain;
+}
+
+.eventContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+}
+
+.eventCard{
+    flex: 0 0 30%;
+    background-color: rgba(29, 29, 30, 0.669);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    color:white;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+
+.eventContent{
+    padding: 24px;
+}
+
+.eventImage{
+    height: 90px;
+}
+
+#event1{
+    background-color: #fa8925;
+}
+
+#event2{
+    background-color: #5fa55a;
+}
+
+#event3{
+    background-color: #01b4bc;
+}
+
+#event4{
+   background-color: #f6d51f;
+}
+
+#event5{
+    background-color: rgb(255, 216, 248);
+}
+
+#event6{
+   background-color: #fa5457;
+}
+.eventHeadTitle{
+    font-size: 22px;
+}
+
+.eventHeadDesc{
+    font-size: 14px;
+}
+
+.eventDesc{
+    margin-top: 14px;
+}
+
+#meetSection{
+    gap: 36px;
+}
+.boardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.boardCard{
+    flex: 0 0 18%;
+    position: relative;
+    cursor: pointer;
+    margin: 4px;
+   border: 2px solid white;
+}
+
+
+.seniorCoreCard{
+    flex: 0 0 6%;
+}
+
+.facultyCard{
+    flex: 0 0 20%;
+}
+
+.seniorCoreName{
+    font-size: 8px !important;
+}
+
+.boardImage{
+   width: 100%;
+   height: auto;
+   display: block;
+}
+
+.boardCard:hover .boardContent{
+    animation-name: bubbleLeft;
+    animation-duration: 0.3s;
+    opacity: 1;
+}
+
+.boardContent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 35, 67, 0.9);
+    color: white;
+    display: flex;
+    flex-flow: column;
+    opacity: 0;
+    transition: all 0.8s ease-in-out; 
+}
+
+.facultyContent{
+    background-color: rgba(255, 49, 97, 0.9);
+}
+
+.seniorCoreContent{
+    background-color: #1c271b;
+}
+.boardStatement{
+    font-size: 16px;
+    font-weight: 300;
+    padding: 12px;
+}
+.boardName{
+    padding: 12px 12px 0 12px;
+    font-size: 18px;
+    align-self: flex-end;
+}
+
+.boardDesignation{
+    padding: 2px 12px 0 12px;
+    font-size: 16px;
+    align-self: flex-end;
+}
+
+.boardSocial{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: flex-end;
+    font-size: 1px !important;
+}
+
+#quoteSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    gap: 14px;
+    width: 50%;
+    background: linear-gradient(45deg,red,orange);
+    padding: 72px 36px;
+    border-radius: 12px;
+    box-shadow: 0px 0px #959595;
+}
+
+#quoteSection h1{
+    font-size: 24px;
+    text-align: center;
+    font-weight: 300;
+}
+
+#quoteButton{
+    align-self: center;
+    border-radius: 18px;
+    font-size: 10px !important;
+    background-color: rgb(1, 0, 40);
+    cursor:none;
+}
+
+#footerSection{
+    margin: 0;
+    background: url(src/images/image--rpWgfr3S-transformed.png);
+    background-size: cover;
+    color: white;
+}
+
+#bgblurfooter{
+    backdrop-filter: blur(24px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    padding:24px 24px 48px 24px;
+    background-color: rgba(1, 0, 40, 0.43);
+}
+
+#footerLeft{
+    display: flex;
+    flex-direction: column;
+}
+
+.footerLeftHead{
+    padding-bottom: 12px;    
+}
+
+.contactContent{
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.socialContainer{
+    margin-top: 18px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 6px;
+}
+
+.social{
+    font-size: 21px;
+    padding: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.social:hover{
+    transform: scale(1.4);
+}
+
+
+#instagram:hover{
+    color:rgb(252, 80, 109);
+}
+#mail:hover{
+    color: rgb(255, 119, 70) ;
+}
+#twitter:hover{
+    color: black;
+}
+#linkedIn:hover{
+    color: rgb(0, 0, 55);
+}
+#medium:hover{
+    color: rgb(255, 228, 90);
+}
+
+.footerRight{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footerRightHead{
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.subscribeNewsletter{
+    margin: 0;
+    padding:12px;
+    font-size: 12px;
+    font-weight: 400;
+    outline: none;
+    background-color: rgb(255, 216, 248);
+    border: 1px solid rgb(255, 216, 248);
+    color: rgb(1, 0, 40);
+    border-radius: 2px;
+}
+
+.subscribeNewsletter:focus{
+    outline: #fbff7d;
+}
+
+#btnSubscribe{
+    width: 100%;
+}
+
+.footerCardContainers{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.footerCard{
+    font-weight: 300;
+    text-align: center;
+}
+
+.footerDesignation{
+    color: rgb(255, 216, 248);
+    font-size: 18px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+.contactContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.contactCard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 18px;
+    font-size: 21px;
+}
+
+/* Mobile Size */
+
+@media screen and (min-width:320px) and (max-width:768px){
+    #heroSection{
+        height: 77vh;
+    }
+    #menu{
+        font-size: 14px;
+        gap: 9px;
+    }
+    .menuButton{
+        display: none;
+    }
+
+    .menuBar{
+        display: block;
+    }
+
+    #carouselRight{
+        display: none;
+    }
+
+    .sponsorCard:nth-child(n+5){
+        display: none;
+    }
+
+    .heroText{
+        font-size: 68px;
+    }
+
+    #mottoCardContainer{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .imageFrame{
+        display: none;
+    }
+
+    .aboutContentContainer{
+        width: 100%;
+    }
+
+    #bgblurfooter{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 24px;
+        gap: 48px;
+    }
+
+    .footerRight{
+        padding-top: 24px;
+        border-top: 8px solid rgb(1, 0, 40);
+        width: 100%;
+    }
+
+    .footerRightHead{
+        font-size: 21px;
+    }
+    .eventCard{
+        flex: 0 0 90%;
+    }
+
+    .boardCard{
+        flex: 0 0 80%;
+    }
+
+    .seniorCoreCard{
+        flex: 0 0 10% !important;
+        font-size: 12px !important;
+    }
+
+
+    .heroText{
+        font-size: 48px;
+    }
+    
+    .heroDesc{
+        font-size: 18px;
+    }
+
+    .sponsorCard{
+        height: 60px;
+        width: 60px;
+    }
+
+    #stockGro{
+        height: 30px;
+    }
+}
+
+/* Tablet Size */
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    .menuButton{
+        display: block;
+    }
+
+    .menuBar{
+        display: none;
+    }
+
+    .sponsorCard:nth-child(n+9){
+        display: none;
+    }
+
+    #mottoCardContainer{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .boardCard{
+        flex: 0 0 32%;
+    }
+
+    .seniorCoreCard{
+        flex: 0 0 12% !important;
+    }
+}
+
+/* Laptop */
+
+@media screen and (min-width:1024px){
+    .menuButton{
+        display: block;
+    }
+
+    .menuBar{
+        display: none;
+    }
+
+    .sponsorCard:nth-child(n){
+        display: block;
+    }
+}
+
+@keyframes bringLeft {
+    from{
+        transform:translateX(-2000px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes bringRight {
+    from{
+        transform:translateX(2000px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes sponsorDown {
+    from{
+        transform:translateY(-800px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes bubbleLeft{
+    from{
+        width:10%;
+        opacity: 0;
+    }
+    to{
+        width:100%;
+        opacity: 1;
+    }
+}
+
+.eventMoreContent{
+    padding: 24px;
+    display: none;
+}
+
+.eventCard:hover{
+    animation-name: flip;
+    animation-duration: 1s;
+}
+
+.eventCard:hover .eventMoreContent{
+    display: block;
+}
+
+.eventCard:hover .eventContent{
+    display: none;
+}
+
+@keyframes flip {
+    from {
+        transform: rotateY(180deg);
+    }
+    to {
+        transform: rotateY(0deg);
+    }
+}
